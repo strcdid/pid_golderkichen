@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Struktur dari tabel `about`
 --
 
-CREATE TABLE `about` (
+CREATE TABLE `About` (
   `id` int(10) UNSIGNED NOT NULL,
   `banner` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tittle` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
