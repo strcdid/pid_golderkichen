@@ -40,7 +40,7 @@ CREATE TABLE `About` (
 -- Dumping data untuk tabel `about`
 --
 
-INSERT INTO `about` (`id`, `banner`, `tittle`, `deskription`, `created_at`, `updated_at`) VALUES
+INSERT INTO `About` (`id`, `banner`, `tittle`, `deskription`, `created_at`, `updated_at`) VALUES
 (1, 'about/April2022/zStff2jR9ayQrJjkB27r.jpg', 'Pelayanan Tepat Waktu', 'Pelayanan Kamu Adalah Yang utama', '2022-04-01 08:58:07', '2022-04-01 08:58:07');
 
 -- --------------------------------------------------------

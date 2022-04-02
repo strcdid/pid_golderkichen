@@ -6,32 +6,34 @@
         <div class="col-md-6 col-sm-12 col-xs-12 no-padding">
           <!-- Section Header -->
           <div class="section-header">
-            <h3>Why Choose Us</h3>
-            <p>Here's the story of a lovely lady who was bringing up three very lovely girls. That this group would somehow form a family that's the way we all brady bunch. </p>
-          </div><!-- Section Header /- -->
-          <div class="why-choose-box">
-            <img src="images/home-1-why-choose-box1.jpg" width="111" height="111" alt="Why Choose" />
-            <h6>Well Experienced team</h6>
-            <span>Our awesome features</span>
-            <p>To a deluxe apartment in the sky. Were gonna do it. Give us any chance well take it any rule we'll break it. </p>
+              {!! setting('about.WYCY') !!}
           </div>
-          <div class="why-choose-box">
-            <img src="images/home-1-why-choose-box2.jpg" width="111" height="111" alt="Why Choose" />
-            <h6>advanced technology</h6>
-            <span>Our awesome features</span>
-            <p>To a deluxe apartment in the sky. Were gonna do it. Give us any chance well take it any rule we'll break it. </p>
+@php
+$wht=DB::table('giveforyou')->get();
+@endphp          
+@foreach ($wht as $nu)
+           <div class="why-choose-box">
+            <img src="{!! url('/lgarin211.github.io/'.$nu->banner) !!}" width="111" height="111" alt="Why Choose" />
+            <h6>{!! $nu->tiitle !!}</h6>
+            {{-- <span>Our awesome features</span> --}}
+            <p>{!! $nu->massage !!}</p>
           </div>
-          <div class="why-choose-box">
-            <img src="images/home-1-why-choose-box3.jpg" width="111" height="111" alt="Why Choose" />
-            <h6>award winning</h6>
-            <span>Our awesome features</span>
-            <p>To a deluxe apartment in the sky. Were gonna do it. Give us any chance well take it any rule we'll break it. </p>
-          </div>
+@endforeach
+
         </div>
       </div><!-- Container -->
       <div class="section-padding"></div>
       <div class="why-choose-bg-img">
-        <img src="images/home-1-why-choose-bg.png" width="669" height="940" alt="Why Choose" />
+        {{-- <img src="images/home-1-why-choose-bg.png" width="669" height="940" alt="Why Choose" /> --}}
+        @php
+          $set=json_decode(setting('about.BTYC'));
+          $set=$set[0]->download_link;
+        @endphp
+        {{-- {!! url('/lgarin211.github.io/'.$set) !!} --}}
+        {{-- <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" class="col-md-12"></iframe> --}}
+
+        <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100vh;"></iframe>
+
       </div>
     </div>
     <!-- Why choose Section /- -->

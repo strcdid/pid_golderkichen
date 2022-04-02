@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // $set=json_decode(setting('about.BTYC'));
+    // $set=$set[0]->download_link;
+    // dd($set);
     return view('onlink/section1');
 });
 
