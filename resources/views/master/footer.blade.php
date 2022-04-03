@@ -4,7 +4,7 @@
     <!-- Container -->
     <div class="container">
       <div class="footer-callout">
-        <h4><img src="images/footer-callout-ic.png" width="44" height="40" alt="Call Out Ic" /> Want to hire us for your work? <span>Just <b>Contact Us</b> and you’re done</span></h4>
+        <h4><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" width="44" height="40" alt="Call Out Ic" /> Want to hire us for your work? <span>Just <b>Contact Us</b> and you’re done</span></h4>
         <a href="#" title="contact us">contact us</a>
       </div>
       <div class="row">
@@ -13,26 +13,27 @@
             <h3 class="widget-title">Contact us</h3>
             <div class="info-box">
               <h5>Address</h5>
-              <p>17 Downtown St, Victoria, Australia.</p>
+              <p>{!! setting('contact.CA') !!}</p>
             </div>
             <div class="info-box">
               <h5>Email Us</h5>
-              <a href="mailto:info@ourdomain.com" title="Info@Ourdomain.Com">Info@Ourdomain.Com</a>
-              <a href="mailto:support@ourdomain.com" title="Support@Ourdomain.Com">Support@Ourdomain.Com</a>
+              <a href="mailto:{!! setting('contact.CE') !!}" title="{!! setting('contact.CE') !!}">{!! setting('contact.CE') !!}</a>
             </div>
             <div class="info-box">
               <h5>Call Us</h5>
-              <a href="tel:+101234567896" title="+(10) 123 456 7896">+(10) 123 456 7896</a>
-              <a href="tel:+101234567899" title="+(10) 123 456 7899">+(10) 123 456 7899</a>
+              <a href="tel:+{!! setting('contact.CP') !!}" title="{!! setting('contact.CP') !!}">Phone : +{!! setting('contact.CP') !!}</a>
+              <a href="https://wa.me/+{!! setting('contact.CW') !!}" title="+{!! setting('contact.CW') !!}">Whatapp : +{!! setting('contact.CW') !!}</a>
+              <a href="https://www.instagram.com/{!! setting('contact.CI') !!}" title="{!! setting('contact.CI') !!}">Instagram : {!! setting('contact.CI') !!} </a>
+              <a href="https://www.facebook.com/{!! setting('contact.CF') !!}" title="{!! setting('contact.CF') !!}">Facebook : {!! setting('contact.CF') !!} </a>
             </div>
           </aside>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-          <aside class="ftr-widget widget_opening">
+          {{-- <aside class="ftr-widget widget_opening">
             <h3 class="widget-title">opening Hours</h3>
             <p><span>Monday - Friday </span>: 9:00am to 7:00pm</p>
             <p><span>Sunday - Saturday </span>: 9:00am to 7:00pm</p>
-          </aside>
+          </aside> --}}
           <aside class="ftr-widget widget_links">
             <h3 class="widget-title">useful links</h3>
             <ul>
@@ -44,36 +45,17 @@
             </ul>
           </aside>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-sm-12 col-xs-12">
           <aside class="ftr-widget widget_subscribe">
-            <h3 class="widget-title">subscribe</h3>
-            <form>
-              <div class="form-group">
-                <i class="icon icon-User"></i>
-                <input type="text" class="form-control" placeholder="Your Name" />
-              </div>
-              <div class="form-group">
-                <i class="icon icon-Mail"></i>
-                <input type="text" class="form-control" placeholder="Email" />
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Subscribe" />
-              </div>
-            </form>
-          </aside>          
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-6">
-          <aside class="ftr-widget widget_gallery">
-            <h3 class="widget-title">project gallery</h3>
-            <div class="ftr-gallery">
-              <a href="#"><img src="images/ftr-wid-gallery1.jpg" width="83" height="83" alt="Gallery" /></a>
-              <a href="#"><img src="images/ftr-wid-gallery2.jpg" width="83" height="83" alt="Gallery" /></a>
-              <a href="#"><img src="images/ftr-wid-gallery2.jpg" width="83" height="83" alt="Gallery" /></a>
-              <a href="#"><img src="images/ftr-wid-gallery4.jpg" width="83" height="83" alt="Gallery" /></a>
-              <a href="#"><img src="images/ftr-wid-gallery5.jpg" width="83" height="83" alt="Gallery" /></a>
-              <a href="#"><img src="images/ftr-wid-gallery6.jpg" width="83" height="83" alt="Gallery" /></a>
-            </div>
-          </aside>          
+              <style>
+                  .biw{
+                      border: none;
+                      height: 50vh;
+                      max-height: 100%;
+                  }
+              </style>
+            <iframe src="{!! setting('contact.CM') !!}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"   class="col-md-12 biw" ></iframe>
+          </aside>
         </div>
       </div>
     </div><!-- Container /- -->

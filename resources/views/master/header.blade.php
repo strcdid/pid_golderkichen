@@ -25,18 +25,18 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <a href="#" title="Alcazar"><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" alt="Logo" style="width: 50px;"></a>
+              <a href="#" title="{!! setting('site.title') !!}"><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" alt="Logo" style="width: 100px;"></a>
             </div>
             <div class="col-md-8 col-sm-12 header-content">
               <div class="header-cnt-box">
                 <i class="icon icon-Time"></i>
                 <h4>opening hours</h4>
-                <p>MON - FRI : 9:00am to 8:00pm</p>
+                <p>{!! setting('contact.CWK') !!}</p>
               </div>
               <div class="header-cnt-box">
                 <i class="icon icon-Pointer"></i>
-                <h4>opening hours</h4>
-                <p>MON - FRI : 9:00am to 8:00pm</p>
+                <h4>We are Location</h4>
+                <p>{!! setting('contact.CA') !!}/p>
               </div>
             </div>
           </div>
@@ -61,21 +61,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.html" title="Alcazar" class="navbar-brand">Alcazar</a>
+          <a href="{{url('/')}}" title="{!! setting('site.title') !!}" class="navbar-brand">{!! setting('site.title') !!}</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li class="dropdown active">
-              <a href="#top" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-              <i class="ddl-switch fa fa-angle-down"></i>
-              <ul class="dropdown-menu">
-                <li><a href="index.html" title="Home">home</a></li>
-                <li><a href="index2.html" title="Home 2">hOME 2</a></li>
-              </ul>
-            </li>
-            <li><a href="about.html" title="About US">About US</a></li>
-            <li><a href="services.html" title="Services">Services</a></li>
+            <li><a href="{{url('/')}}" title="Home">HOME</a></li>
+            <li><a href="{{url('/about')}}" title="About">About US</a></li>
             <li class="dropdown">
+                <a href="{{url('/service')}}" title="Service" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Service</a>
+                <i class="ddl-switch fa fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                    @php
+                    $services=DB::table('service')->get();
+                    @endphp
+                    @foreach ($services as $nu)
+                    <li><a href="{{url('/service/detail')}}" title="{!! $nu->tiitle !!}">{!! $nu->tiitle !!}</a></li>
+                    @endforeach
+                </ul>
+            </li>
+            <!-- <li><a href="services.html" title="Services">Services</a></li> -->
+            <!-- <li class="dropdown">
               <a href="#portfolio-section" title="Projects" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
               <i class="ddl-switch fa fa-angle-down"></i>
               <ul class="dropdown-menu">
@@ -83,7 +88,7 @@
                 <li><a href="portfolio-4-column.html" title="Portfolio 5 Coulmn">Portfolio 4 Coulmn</a></li>
                 <li><a href="project-detail.html" title="Project Detail">Project Detail</a></li>
               </ul>
-            </li>           
+            </li>
             <li class="dropdown">
               <a href="#blog-section" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Latest News</a>
               <i class="ddl-switch fa fa-angle-down"></i>
@@ -92,7 +97,7 @@
                 <li><a href="blog-single.html" title="Single Post">Single Post</a></li>
               </ul>
             </li>
-            <li><a href="contact-us.html" title="Contact US">Contact US</a></li>
+            <li><a href="contact-us.html" title="Contact US">Contact US</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </nav><!-- nav /- -->

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // $set=json_decode(setting('about.BTYC'));
-    // $set=$set[0]->download_link;
-    // dd($set);
+    return view('view/index');
+});
+
+Route::get('/about', function () {
+    return view('view/about');
+});
+
+Route::get('/service', function () {
+    return view('view/service');
+});
+
+Route::get('/service/detail', function () {
+    return view('view/servicedetail');
+});
+
+Route::get('/make', function () {
     return view('onlink/section1');
+});
+
+Route::get('/load', function () {
+    return view('onlink/load');
 });
 
 

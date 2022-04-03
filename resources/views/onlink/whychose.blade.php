@@ -10,7 +10,7 @@
           </div>
 @php
 $wht=DB::table('giveforyou')->get();
-@endphp          
+@endphp
 @foreach ($wht as $nu)
            <div class="why-choose-box">
             <img src="{!! url('/lgarin211.github.io/'.$nu->banner) !!}" width="111" height="111" alt="Why Choose" />
@@ -32,7 +32,7 @@ $wht=DB::table('giveforyou')->get();
         {{-- {!! url('/lgarin211.github.io/'.$set) !!} --}}
         {{-- <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" class="col-md-12"></iframe> --}}
 
-        <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100vh;"></iframe>
+        <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" title="" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: inherit; height: -webkit-fill-available;"></iframe>
 
       </div>
     </div>
