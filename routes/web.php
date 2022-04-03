@@ -27,17 +27,22 @@ Route::get('/service', function () {
 });
 
 Route::get('/service/detail', function () {
-    return view('view/servicedetail');
+    if (empty($_GET['id'])){
+        return redirect('/service');
+    }else{
+        return view('view/servicedetail');
+    }
 });
+
+Route::get('/portofolio', function () {
+    return view('view/portofolio');
+});
+
+
 
 Route::get('/make', function () {
     return view('onlink/section1');
 });
-
-Route::get('/load', function () {
-    return view('onlink/load');
-});
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -4,7 +4,7 @@
       <div class="container">
         <div class="testimonial-carousel">
 @php
-$testimony=DB::table('testimony')->get();
+$testimony=DB::table('testimony')->inRandomOrder()->get();
 @endphp          
 @foreach ($testimony as $key=>$nu)
           <div class="testimonial-box">

@@ -9,7 +9,7 @@
         </div><!-- Section Header /- -->
         <div class="row">
 @php
-$services=DB::table('service')->get();
+$services=DB::table('service')->inRandomOrder()->get();
 @endphp
 @foreach ($services as $nu)
           <div class="col-md-4 col-sm-6 col-xs-6">
@@ -28,4 +28,4 @@ $services=DB::table('service')->get();
       </div><!-- Container /- -->
     </div>
     <!-- Services Section /- -->
-    <div class="section-padding"></div>
+    <!-- <div class="section-padding"></div> -->

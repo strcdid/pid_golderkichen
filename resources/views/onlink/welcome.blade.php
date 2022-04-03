@@ -13,11 +13,11 @@
         </div>
         <div class="col-md-6 col-sm-6 welcome-content">
           <p>{!! setting('about.AWY') !!}</p>
-          <div class="row">
 @php
 $about=DB::table('About')->get();
 @endphp          
 @foreach ($about as $nu)
+          <div class="row mb-1">
             <div class="col-sm-5">
               <img src="{!! url('/lgarin211.github.io/'.$nu->banner) !!}">
             </div>
@@ -25,12 +25,10 @@ $about=DB::table('About')->get();
               <h4>{!! $nu->tittle !!}</h4>
               <p>{!! $nu->deskription !!} </p>
             </div>
-@endforeach
-
           </div>
+@endforeach
         </div>
       </div>
       <!-- Container /- -->
     </div>
     <!-- Welcome Section /- -->
-    <div class="section-padding"></div>

@@ -1,6 +1,6 @@
     <!-- Why Chosse Section -->
     <div class="why-choose-section container-fluid no-padding">
-      <div class="section-padding"></div>
+      <!-- <div class="section-padding"></div> -->
       <!-- Container -->
       <div class="container">
         <div class="col-md-6 col-sm-12 col-xs-12 no-padding">
@@ -22,7 +22,7 @@ $wht=DB::table('giveforyou')->get();
 
         </div>
       </div><!-- Container -->
-      <div class="section-padding"></div>
+      <!-- <div class="section-padding"></div> -->
       <div class="why-choose-bg-img">
         {{-- <img src="images/home-1-why-choose-bg.png" width="669" height="940" alt="Why Choose" /> --}}
         @php

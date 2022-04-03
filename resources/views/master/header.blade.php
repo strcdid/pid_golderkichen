@@ -79,6 +79,9 @@
                     @endforeach
                 </ul>
             </li>
+            <li><a href="{{url('/portofolio')}}" title="portofolio">Portofolio</a></li>
+            <li><a href="{{url('/Contac')}}" title="Contac">Contac</a></li>
+            <!-- <li><a href="{{url('/FQA')}}" title="portofolio">Portofolio</a></li> -->
             <!-- <li><a href="services.html" title="Services">Services</a></li> -->
             <!-- <li class="dropdown">
               <a href="#portfolio-section" title="Projects" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>

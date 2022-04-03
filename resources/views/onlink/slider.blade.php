@@ -10,7 +10,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
 @php
-$slider=DB::table('slider')->get();
+$slider=DB::table('slider')->inRandomOrder()->get();
 @endphp          
 @foreach ($slider as $key=>$nu)
           <div class="item @if($key==0) active @endif">
@@ -39,4 +39,4 @@ $slider=DB::table('slider')->get();
       </div>    
     </div>
     <!-- Slider Section /- -->
-    <div class="section-padding"></div>
+    <!-- <div class="section-padding"></div> -->

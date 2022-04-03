@@ -4,5 +4,3 @@
 			<h2>About US</h2>
 		</div>
         <!-- Banner Section /- -->
-		
-		<div class="section-padding"></div>

@@ -1,6 +1,6 @@
 <!-- Counter Section -->
 <div class="counter-section container-fluid no-padding">
-    <div class="section-padding"></div>
+    <!-- <div class="section-padding"></div> -->
     <!-- Container -->
     <div class="container">
         <div class="row">
@@ -60,6 +60,6 @@
             </div>
         </div>
     </div><!-- Container /- -->
-    <div class="section-padding"></div>
+    <!-- <div class="section-padding"></div> -->
 </div>
 <!-- counter Section /- -->

@@ -1,4 +1,4 @@
-<div class="section-padding"></div>
+<!-- <div class="section-padding"></div> -->
 		<!-- Testimonial Section -->
 		<div class="testimonial-section2 container-fluid no-padding">
 			<!-- Container -->
@@ -12,7 +12,7 @@
 				<div class="testimonial-carousel2">
 
                     @php
-                    $testimony=DB::table('testimony')->get();
+                    $testimony=DB::table('testimony')->inRandomOrder()->get();
                     @endphp
                     @foreach ($testimony as $key=>$nu)
                               <div class="testimonial-box">
@@ -27,4 +27,4 @@
 				</div>
 			</div><!-- Container /- -->
 		</div><!-- Testimonial Section /- -->
-<div class="section-padding"></div>
+<!-- <div class="section-padding"></div> -->

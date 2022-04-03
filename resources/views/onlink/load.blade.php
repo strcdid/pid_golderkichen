@@ -23,5 +23,10 @@
                         </div>
                     </article>
                 </div>
+                
                 <!-- Content Area /- -->
-                @include('onlink/wigetservice')
+            </div><!-- container /- -->
+            <!-- <div class="section-padding"></div> -->
+        </div><!-- Latest News Section /- -->
+
+
