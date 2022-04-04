@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'b0c50495535412af518221ffd0bcf7b4d759bd82',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -17,6 +17,15 @@
             'install_path' => __DIR__ . '/../arrilot/laravel-widgets',
             'aliases' => array(),
             'reference' => 'ae0e44ce625026ae71c6ab9259f89f13af227e37',
+            'dev_requirement' => false,
+        ),
+        'artesaos/seotools' => array(
+            'pretty_version' => 'v0.22.0',
+            'version' => '0.22.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../artesaos/seotools',
+            'aliases' => array(),
+            'reference' => '55746e0870d3bb6507479bd846d5528c46a7312e',
             'dev_requirement' => false,
         ),
         'asm89/stack-cors' => array(
@@ -433,6 +442,15 @@
             'reference' => '744ebba495319501b873a4e48787759c72e3fb8c',
             'dev_requirement' => false,
         ),
+        'josiasmontag/laravel-recaptchav3' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../josiasmontag/laravel-recaptchav3',
+            'aliases' => array(),
+            'reference' => 'a18b78e3921ea8c265a136bb0823a08e601bef0b',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -458,12 +476,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'b0c50495535412af518221ffd0bcf7b4d759bd82',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

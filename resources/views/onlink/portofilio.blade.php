@@ -4,12 +4,12 @@
         <!-- Section Header -->
         <div class="section-header">
           <h3>Our Latest Projects</h3>
-          <p>Today still wanted by the government they surv</p>
+          <p>See Golden Kitchen's projects</p>
         </div><!-- Section Header -->
         <!-- Portfolio Filters -->
         <ul id="filters" class="portfolio-categories no-left-padding sorting-menu">
           <li class=""><a data-filter="*" class="active" href="#">all projects</a></li>
-          <li class=""><a data-filter=".gardening" class="" href="#">gardening</a></li>
+          <li class=""><a data-filter=".gardening" class="" href="#">splash</a></li>
 @php
 $oo=DB::table('categories')->get();
 @endphp

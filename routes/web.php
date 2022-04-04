@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\SEOController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +17,11 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/', function () {
-    return view('view/index');
-});
+// Route::get('/', function () {
+//     return view('view/index');
+// });
+
+Route::get('/', [SEOController::class, 'index'])->name('index');
 
 Route::get('/about', function () {
     return view('view/about');
@@ -38,11 +43,24 @@ Route::get('/portofolio', function () {
     return view('view/portofolio');
 });
 
+Route::post('/umami', function () {
+    dd($_POST);
+    return view('view/portofolio');
+});
+
 
 
 Route::get('/make', function () {
     return view('onlink/section1');
 });
+
+
+// Route::get('/contact', function () {
+//     return view('onlink/contac');
+// });
+
+Route::get('contact', [KontakController::class, 'index'])->name('kontak');
+Route::post('contact', [KontakController::class, 'store'])->name('kontik');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -6,7 +6,7 @@
 				<!-- Section Header -->
 				<div class="section-header">
 					<h3>Testimony</h3>
-					<p>Today still wanted government</p>
+					<p>Let our clients speak</p>
 				</div><!-- Section Header /- -->
 
 				<div class="testimonial-carousel2">

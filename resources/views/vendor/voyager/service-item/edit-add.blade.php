@@ -20,7 +20,6 @@
 @stop
 
 @section('content')
-    <h1>Agustinus</h1>
     <div class="page-content edit-add container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -28,7 +27,7 @@
                 <div class="panel panel-bordered">
                     <!-- form start -->
                     <form role="form"
-                            class="form-edit-add"
+                            class="form-edit-add"                           
                             action="{{ $edit ? route('voyager.'.$dataType->slug.'.update', $dataTypeContent->getKey()) : route('voyager.'.$dataType->slug.'.store') }}"
                             method="POST" enctype="multipart/form-data">
                         <!-- PUT Method if we are editing -->
@@ -58,6 +57,20 @@
 
                             @foreach($dataTypeRows as $row)
                                 <!-- GET THE DISPLAY OPTIONS -->
+
+                                <!-- lgarin211.github.io -->
+                                @php
+                                    if($row->field=='projectname'){
+                                        $pas=DB::table('service')->get();
+                                        $naw=[];
+                                        foreach($pas as $ni=>$nu){
+                                            $naw["options"][$nu->id]=$nu->tiitle;
+                                        }
+                                        
+                                        $naw=$naw;
+                                        $row->details=$naw;
+                                    }
+                                @endphp
                                 @php
                                     $display_options = $row->details->display ?? NULL;
                                     if ($dataTypeContent->{$row->field.'_'.($edit ? 'edit' : 'add')}) {

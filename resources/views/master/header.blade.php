@@ -30,12 +30,12 @@
             <div class="col-md-8 col-sm-12 header-content">
               <div class="header-cnt-box">
                 <i class="icon icon-Time"></i>
-                <h4>opening hours</h4>
+                <h4>Opening Hours</h4>
                 <p>{!! setting('contact.CWK') !!}</p>
               </div>
               <div class="header-cnt-box">
                 <i class="icon icon-Pointer"></i>
-                <h4>We are Location</h4>
+                <h4>Our Location</h4>
                 <p>{!! setting('contact.CA') !!}/p>
               </div>
             </div>
@@ -79,8 +79,8 @@
                     @endforeach
                 </ul>
             </li>
-            <li><a href="{{url('/portofolio')}}" title="portofolio">Portofolio</a></li>
-            <li><a href="{{url('/Contac')}}" title="Contac">Contac</a></li>
+            <li><a href="{{url('/portofolio')}}" title="portofolio">Portfolio</a></li>
+            <li><a href="{{url('/Contac')}}" title="Contac">Contact</a></li>
             <!-- <li><a href="{{url('/FQA')}}" title="portofolio">Portofolio</a></li> -->
             <!-- <li><a href="services.html" title="Services">Services</a></li> -->
             <!-- <li class="dropdown">

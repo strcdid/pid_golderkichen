@@ -4,7 +4,7 @@
       <div class="container">
         <!-- Section Header -->
         <div class="section-header">
-          <h3>Welcome {!! setting('site.title') !!}</h3>
+          <h3>Welcome to {!! setting('site.title') !!}</h3>
           <p>{!! setting('site.description') !!}</p>
         </div>
         <!-- Section Header /- -->
@@ -15,7 +15,7 @@
           <p>{!! setting('about.AWY') !!}</p>
 @php
 $about=DB::table('About')->get();
-@endphp          
+@endphp
 @foreach ($about as $nu)
           <div class="row mb-1">
             <div class="col-sm-5">

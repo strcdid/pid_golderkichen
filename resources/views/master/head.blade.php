@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html class="">
 <head>
+    {!! SEO::generate() !!}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{!! RecaptchaV3::initJs() !!}
   <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,25 +18,25 @@
 
   <!-- Standard Favicon -->
   <link rel="icon" type="image/x-icon" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" />
-  
+
   <!-- For iPhone 4 Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}">
-  
+
   <!-- For iPad: -->
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}">
-  
+
   <!-- For iPhone: -->
-  <link rel="apple-touch-icon-precomposed" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}"> 
-  
-  <!-- Library - Google Font Familys -->  
-  
+  <link rel="apple-touch-icon-precomposed" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}">
+
+  <!-- Library - Google Font Familys -->
+
   <!-- Library - Bootstrap v3.3.5 -->
     <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/libraries/lib.css">
-  
+
   <!-- Custom - Common CSS -->
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/css/plugins.css">
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/css/navigation-menu.css">
-  
+
   <!-- Custom - Theme CSS -->
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/style.css">
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/css/shortcodes.css">
@@ -50,7 +55,7 @@
   <!-- Loader /- -->
 
   <a id="top"></a>
-  
+
   {{-- call header --}}
   @include('master/header')
   <main class="site-main page-spacing">

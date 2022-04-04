@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-7 col-sm-6 col-xs-12 counter-detail">
                 <h4>we are <span>well experienced</span> in renovation</h4>
-                <p>Make all our dreams come true for me and you. They call him Flipper Flipper faster than lightning. No one you see is smarter than he! Doin' it our way.</p>				
+                <p>Golden Kitchen Renovation, the best kitchen renovation solution for <span class="color: red">YOU</span>.</p>
                 <!-- col-md-4 -->
                 <div class="col-md-4 col-sm-4 col-xs-4 animated fadeInDown">
                     <div class="statistics-box">
@@ -54,7 +54,7 @@
                     <div class="statistics-box">
                         <i class="icon icon-WorldWide"></i>
                         <h2 data-statistics_percent="073" id="statistics_count-3">95</h2>
-                        <h6>Our Brances</h6>
+                        <h6>Our Branches</h6>
                     </div>
                 </div><!-- col-md-4 /- -->
             </div>

@@ -4,7 +4,7 @@
         <!-- Section Header -->
         <div class="section-header">
             <h3>Our Latest Projects</h3>
-            <p>Today still wanted by the government soldiers </p>
+            <p>See Golden Kitchen's Renovation</p>
         </div><!-- Section Header -->
         <!-- Portfolio Filters -->
         <ul id="filters" class="portfolio-categories no-left-padding sorting-menu">
