@@ -5,8 +5,8 @@
 			<div class="container">
 				<!-- Section Header -->
 				<div class="section-header">
-					<h3>Testimony</h3>
-					<p>Let our clients speak</p>
+					<h3>Testimonial</h3>
+					<p>What our customers say</p>
 				</div><!-- Section Header /- -->
 
 				<div class="testimonial-carousel2">

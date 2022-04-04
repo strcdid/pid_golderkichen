@@ -1,4 +1,4 @@
-
+{{--
 		<!-- Client Section -->
 		<div class="client-section container-fluid no-padding">
 			<!-- Container -->
@@ -14,4 +14,4 @@ $dan=DB::table('patner')->get();
 			</div>
 			<!-- Container /- -->
 		</div>
-        <!-- Client Section /- -->
+        <!-- Client Section /- --> --}}

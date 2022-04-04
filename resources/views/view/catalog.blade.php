@@ -1,6 +1,6 @@
 @extends('master/master')
 @section('conten')
+    @include('onlink/linmasi')
     <div class="section-padding"></div>
-    @include('onlink/coreportofolio')
-    @include('onlink/counter')
+    @include('onlink/contact')
 @endsection

@@ -8,17 +8,17 @@
           <div class="section-header">
               {!! setting('about.WYCY') !!}
           </div>
-@php
-$wht=DB::table('giveforyou')->get();
-@endphp
-@foreach ($wht as $nu)
-           <div class="why-choose-box">
+        @php
+        $wht=DB::table('giveforyou')->get();
+        @endphp
+        @foreach ($wht as $nu)
+          <div class="why-choose-box">
             <img src="{!! url('/lgarin211.github.io/'.$nu->banner) !!}" width="111" height="111" alt="Why Choose" />
             <h6>{!! $nu->tiitle !!}</h6>
             {{-- <span>Our awesome features</span> --}}
             <p>{!! $nu->massage !!}</p>
           </div>
-@endforeach
+        @endforeach
 
         </div>
       </div><!-- Container -->
@@ -32,7 +32,7 @@ $wht=DB::table('giveforyou')->get();
         {{-- {!! url('/lgarin211.github.io/'.$set) !!} --}}
         {{-- <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" class="col-md-12"></iframe> --}}
 
-        <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" title="" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: inherit; height: -webkit-fill-available;"></iframe>
+        <iframe src="{!! url('/lgarin211.github.io/'.$set) !!}" title="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 50vw; height:350px;"></iframe>
 
       </div>
     </div>

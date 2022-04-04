@@ -1,4 +1,5 @@
 @extends('master/master')
 @section('conten')
-    @include('onlink/contac')
+    <div class="section-padding"></div>
+    @include('onlink/contact')
 @endsection

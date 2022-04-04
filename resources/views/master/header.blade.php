@@ -12,8 +12,8 @@
               <p>{!! setting('site.description') !!}</p>
             </div>
             <div class="col-md-5 col-sm-12">
-              <a href="mailto:info@ourdomain.com" title="Info@ourdomain.com"><i class="fa fa-envelope"></i> Info@ourdomain.com</a>
-              <a href="tel:+011234567896" title="+011234567896"><i class="fa fa-phone"></i> (+01) 123 456 7896</a>
+              <a href="mailto:{!! setting('contact.CE') !!}" title="{!! setting('contact.CE') !!}"><i class="fa fa-envelope"></i> {!! setting('contact.CE') !!}</a>
+              <a href="tel:+{!! setting('contact.CW') !!}" title="+{!! setting('contact.CW') !!}"><i class="fa fa-phone"></i> +{!! setting('contact.CW') !!}</a>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
               <div class="header-cnt-box">
                 <i class="icon icon-Pointer"></i>
                 <h4>Our Location</h4>
-                <p>{!! setting('contact.CA') !!}/p>
+                <p>{!! setting('contact.CA') !!}</p>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="{{url('/')}}" title="{!! setting('site.title') !!}" class="navbar-brand">{!! setting('site.title') !!}</a>
+          <a href="{{url('/')}}" title="{!! setting('site.title') !!}" class="navbar-brand"><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" alt="" style="max-width: 15vw"></a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav">
@@ -79,28 +79,9 @@
                     @endforeach
                 </ul>
             </li>
+            <li><a href="{{url('/catalog')}}" title="catalog">Catalog</a></li>
             <li><a href="{{url('/portofolio')}}" title="portofolio">Portfolio</a></li>
             <li><a href="{{url('/Contac')}}" title="Contac">Contact</a></li>
-            <!-- <li><a href="{{url('/FQA')}}" title="portofolio">Portofolio</a></li> -->
-            <!-- <li><a href="services.html" title="Services">Services</a></li> -->
-            <!-- <li class="dropdown">
-              <a href="#portfolio-section" title="Projects" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-              <i class="ddl-switch fa fa-angle-down"></i>
-              <ul class="dropdown-menu">
-                <li><a href="portfolio-3-column.html" title="Portfolio 3 Coulmn">Portfolio 3 Coulmn</a></li>
-                <li><a href="portfolio-4-column.html" title="Portfolio 5 Coulmn">Portfolio 4 Coulmn</a></li>
-                <li><a href="project-detail.html" title="Project Detail">Project Detail</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#blog-section" title="Latest News" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Latest News</a>
-              <i class="ddl-switch fa fa-angle-down"></i>
-              <ul class="dropdown-menu">
-                <li><a href="blog.html" title="Blog">Blog</a></li>
-                <li><a href="blog-single.html" title="Single Post">Single Post</a></li>
-              </ul>
-            </li>
-            <li><a href="contact-us.html" title="Contact US">Contact US</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </nav><!-- nav /- -->

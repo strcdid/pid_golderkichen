@@ -1,36 +1,10 @@
 <!-- Counter Section -->
-<div class="counter-section container-fluid no-padding">
+<div class="counter-section container-fluid no-padding" style="margin-bottom: 5vh;">
     <!-- <div class="section-padding"></div> -->
     <!-- Container -->
     <div class="container">
         <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
-                <form class="contact-form">
-                    <h4>Request a quick quote</h4>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <input type="text" class="form-control" id="input_name" name="contact-name" placeholder="Name *" required />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <input type="email" class="form-control" id="input_email" name="contact-email" placeholder="email *" required />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <input type="text" class="form-control" id="input_subject" name="contact-subject" placeholder="Subject" required />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <input type="text" class="form-control" id="input_phone" name="contact-phone" placeholder="Phone" required />
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <textarea id="textarea_message" class="form-control" rows="5" name="contact-message" placeholder="your mesage" required ></textarea>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 ">
-                            <input type="submit" value="send message" name="submit" id="btn_submit">
-                        </div>
-                        <div id="alert-msg" class="alert-msg"></div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-7 col-sm-6 col-xs-12 counter-detail">
+            <div class="col-md-12 col-sm-12 col-xs-12 counter-detail">
                 <h4>we are <span>well experienced</span> in renovation</h4>
                 <p>Golden Kitchen Renovation, the best kitchen renovation solution for <span class="color: red">YOU</span>.</p>
                 <!-- col-md-4 -->

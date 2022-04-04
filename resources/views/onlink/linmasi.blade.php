@@ -9,14 +9,22 @@
         </div><!-- Section Header /- -->
         <div class="row">
 @php
-$wht=DB::table('service_item')->get();
-$why=DB::table('service')->get();
+if(!empty($_GET['lin'])){
+$wht=DB::table('service_item')->where('projectname',$_GET['lin'])->get();
+$incor=DB::table('catalog')->where('lans_key',$_GET['lin'])->get()[0];
+}
+$why=DB::table('catalog')->get();
 @endphp
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1 id="message">Demo color</h1>
-                        <img id="myImage" src="https://strcdid.github.io/ast01/img/dev/kunin.png">
+                         @empty($incor)
+                            <h1 id="message">{!! setting('site.description') !!}</h1>
+                            <img id="myImage" src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}">
+                            @else
+                            <h1 id="message">{!! $incor->Tiitle !!}</h1>
+                            <img id="myImage" src="{!! url('/lgarin211.github.io/'.$incor->Default_banner) !!}">
+                        @endempty
                     </div>
                     <div class="col-md-4">
                         <div class="card">
@@ -24,12 +32,21 @@ $why=DB::table('service')->get();
                                 <div class="col-md-12">
                                     <h3>Select Your Kitchen Catalog</h3>
                                     <select name="bin" id="bin" class="form-control" onchange="fujitsu()">
+                                        <option value="">...</option>
                                         @foreach ($why as $nu)
-                                            <option value="$nu->id">{!! $nu->tiitle !!}</option>
+                                            <option value="{{$nu->lans_key}}">{!! $nu->Tiitle !!}</option>
                                         @endforeach
                                     </select>
                                     <hr>
                                 </div>
+                                <script>
+                                    function fujitsu() {
+                                        var x = document.getElementById("bin").value;
+                                        window.location.replace("{{url('/catalog?lin=')}}" + x);
+                                    }
+                                </script>
+                                @if (!empty($wht))
+
                                 <div class="col-md-12">
                                     <h3>Choose your Color</h3>
                                     <div class="button">
@@ -38,6 +55,8 @@ $why=DB::table('service')->get();
                                         @endforeach
                                     </div>
                                 </div>
+
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -45,6 +64,7 @@ $why=DB::table('service')->get();
             </div>
 
             <script>
+            @if (!empty($wht))
                 @foreach ($wht as $nu)
                 function {{'inobipon'.$nu->id}}(){
                 document.getElementById('myImage')
@@ -53,6 +73,7 @@ $why=DB::table('service')->get();
                 .innerHTML="{{$nu->tiitle}}";
                 }
                 @endforeach
+            @endif
             </script>
 
         </div>

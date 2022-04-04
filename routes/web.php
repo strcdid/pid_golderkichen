@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CounterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
@@ -17,9 +18,6 @@ use App\Http\Controllers\SEOController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('view/index');
-// });
 
 Route::get('/', [SEOController::class, 'index'])->name('index');
 
@@ -39,28 +37,32 @@ Route::get('/service/detail', function () {
     }
 });
 
+Route::get('/portfolio/detail', function () {
+    if (empty($_GET['id'])){
+        return redirect('/portofolio');
+    }else{
+        return view('view/portfoliodetail');
+    }
+});
+
+
 Route::get('/portofolio', function () {
     return view('view/portofolio');
 });
 
-Route::post('/umami', function () {
-    dd($_POST);
-    return view('view/portofolio');
+Route::get('/catalog', function () {
+    return view('view/catalog');
 });
-
-
 
 Route::get('/make', function () {
     return view('onlink/section1');
 });
 
-
-// Route::get('/contact', function () {
-//     return view('onlink/contac');
-// });
-
+Route::get('Contac', [KontakController::class, 'index']);
 Route::get('contact', [KontakController::class, 'index'])->name('kontak');
 Route::post('contact', [KontakController::class, 'store'])->name('kontik');
+Route::post('counter', [CounterController::class, 'index'])->name('counter');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

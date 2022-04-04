@@ -5,7 +5,8 @@
         <div class="section-header">
             <h3>Our Latest Projects</h3>
             <p>See Golden Kitchen's Renovation</p>
-        </div><!-- Section Header -->
+        </div>
+        <!-- Section Header -->
         <!-- Portfolio Filters -->
         <ul id="filters" class="portfolio-categories no-left-padding sorting-menu">
             <li class=""><a data-filter="*" class="active" href="#">all projects</a></li>
@@ -28,7 +29,7 @@
                 <div class="hover-detail">
                     <div class="links">
                         <a href="{{ url('/lgarin211.github.io/'.$nu->banner) }}" class="zoom" title="{{$nu->tittle}}"><i class="fa fa-search"></i></a>
-                        <a href="project-detail.html" title="Link"><i class="fa fa-link"></i></a>
+                        <a href="{{url('portfolio/detail?id='.$nu->id)}}" title="Link"><i class="fa fa-link"></i></a>
                     </div>
                     <div class="project-title">
                         <h3>{{ $nu->tittle }}</h3>

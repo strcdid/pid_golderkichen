@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html class="">
 <head>
+  @php
+  SEO::setTitle(setting('site.description'), false);
+  @endphp
     {!! SEO::generate() !!}
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{!! RecaptchaV3::initJs() !!}
-  <meta charset="utf-8">
-
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="{!! setting('site.description') !!}">
-    <meta name="author" content="{{ 'lgarin211' }}">
-
-  <title>{!! setting('site.description') !!}</title>
 
   <!-- Standard Favicon -->
   <link rel="icon" type="image/x-icon" href="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" />
@@ -41,7 +34,67 @@
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/style.css">
   <link rel="stylesheet" type="text/css" href="{{ url('/ast2') }}/css/shortcodes.css">
   <script src="{{ url('/ast2') }}/js/html5/respond.min.js"></script>
+
+  <link rel="stylesheet"
+href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
+
+<style>
+
+   #hideValuesOnSelect {
+      display: none;
+   }
+
+
+    .shordy {
+  font-size: 3em;
+  line-height: 2em;
+  background: rgb(226, 255, 226);
+  border-radius: 2em;
+  height: 2em;
+  width: 2em;
+  display: inline-block;
+  position: fixed;
+  z-index: 100;
+    right:0;
+bottom:0;
+  text-align: center;
+  color: green;
+  margin: 15px;
+
+}
+
+
+
+/* .phone-number {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: green;
+  border-radius: 50%;
+  padding: 1em;
+  position : fixed;
+    z-index: 100;
+    right:0;
+bottom:0;
+  padding-left: 3.5em;
+  color: white;
+  display: inline-block;
+  width: 10px;
+  margin : 20px;
+}
+.phone-number--below {
+  display: block;
+  text-align: left;
+  padding-left: 2.5em;
+}
+.phone-number:hover {
+  background: #1d71b8;
+} */
+</style>
+
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
   <!-- Loader -->
@@ -59,3 +112,5 @@
   {{-- call header --}}
   @include('master/header')
   <main class="site-main page-spacing">
+
+

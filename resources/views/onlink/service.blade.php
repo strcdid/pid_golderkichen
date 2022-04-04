@@ -29,3 +29,5 @@ $services=DB::table('service')->inRandomOrder()->get();
     </div>
     <!-- Services Section /- -->
     <!-- <div class="section-padding"></div> -->
+    {{-- <button class="btn btn-primary floating-right-bottom-btn">Floating Me!</button> --}}
+

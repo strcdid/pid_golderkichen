@@ -61,12 +61,11 @@
                                 <!-- lgarin211.github.io -->
                                 @php
                                     if($row->field=='projectname'){
-                                        $pas=DB::table('service')->get();
+                                        $pas=DB::table('catalog')->get();
                                         $naw=[];
                                         foreach($pas as $ni=>$nu){
-                                            $naw["options"][$nu->id]=$nu->tiitle;
+                                            $naw["options"][$nu->lans_key]=$nu->Tiitle;
                                         }
-                                        
                                         $naw=$naw;
                                         $row->details=$naw;
                                     }

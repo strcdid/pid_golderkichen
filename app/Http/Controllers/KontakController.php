@@ -3,25 +3,48 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cliend;
 
 class KontakController extends Controller
 {
     public function index()
     {
-        return view('onlink.contact');
+        return view('view/contac');
     }
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $this->validate($request, [
-            'contact-name' => 'required',
-            'contact-email' => 'required|email',
-            'contact-phone' => 'required',
-            'contact-subject' => 'required',
-            'contact-file' => 'required|image',
-            'contact-message' => 'required',
-            'g-recaptcha-response' => 'required|recaptchav3:contact,0.5'
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'subject' => 'required',
+            'file' => 'required|image',
+            'message' => 'required',
         ]);
+
+        $contact = new Cliend;
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->subject = $request->subject;
+        $contact->message = $request->message;
+        // $contact->save();
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/lgarin211.github.io/cliend/'.date('MY')), $filename);
+            $contact->banner = '/cliend/'.date('MY/').$filename;
+        }
+        // dd($contact);
+        $contact->save();
+
+        return redirect('/Contac')->with('success', 'Thanks for your inquiry!');
+
+
+
 
         // $score = RecaptchaV3::verify($request->get('g-recaptcha-response'), 'contact');
         // if($score > 0.7) {

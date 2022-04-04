@@ -5,7 +5,7 @@
     <div class="container">
       <div class="footer-callout">
         <h4><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" width="44" height="40" alt="Call Out Ic" /> Want to hire us for your work? <span>Just <b>Contact Us</b> and you’re done</span></h4>
-        <a href="#" title="contact us">contact us</a>
+        <a href="{{url('/Contac#messageinquire')}}" title="contact us">contact us</a>
       </div>
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-6">
@@ -29,19 +29,25 @@
           </aside>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-          {{-- <aside class="ftr-widget widget_opening">
-            <h3 class="widget-title">opening Hours</h3>
-            <p><span>Monday - Friday </span>: 9:00am to 7:00pm</p>
-            <p><span>Sunday - Saturday </span>: 9:00am to 7:00pm</p>
-          </aside> --}}
           <aside class="ftr-widget widget_links">
             <h3 class="widget-title">useful links</h3>
             <ul>
-              <li><a href="about.html" title="About us">About us</a></li>
-              <li><a href="services.html" title="Services">Services</a></li>
-              <li><a href="portfolio-3-column.html" title="Projects">Projects</a></li>
-              <li><a href="#" title="Our Team">Our Team</a></li>
-              <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
+              <li><a href="{{url('/')}}" title="Home">HOME</a></li>
+              <li><a href="{{url('/about')}}" title="About">About US</a></li>
+              <li class="dropdown">
+                  <a href="{{url('/service')}}" title="Service" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Service</a>
+                  <i class="ddl-switch fa fa-angle-down"></i>
+                  <ul class="dropdown-menu">
+                      @php
+                      $services=DB::table('service')->get();
+                      @endphp
+                      @foreach ($services as $nu)
+                      <li><a href="{{url('/service/detail')}}" title="{!! $nu->tiitle !!}">{!! $nu->tiitle !!}</a></li>
+                      @endforeach
+                  </ul>
+              </li>
+              <li><a href="{{url('/portofolio')}}" title="portofolio">Portfolio</a></li>
+              <li><a href="{{url('/Contac')}}" title="Contac">Contact</a></li>
             </ul>
           </aside>
         </div>
@@ -59,36 +65,5 @@
         </div>
       </div>
     </div><!-- Container /- -->
-    <div class="footer-bottom container-fluid no-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2 col-sm-12 col-xs-12">
-            <p>&copy; 2016 All Rights Reserved</p>
-          </div>
-          <div class="col-md-10 col-sm-12 col-xs-12">
-            <!-- nav -->
-            <nav class="navbar navbar-default ow-navigation">
-              <div class="navbar-header">
-                <button aria-controls="navbar" aria-expanded="false" data-target="#ftr-navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="navbar-collapse collapse navbar-right" id="ftr-navbar">
-                <ul class="nav navbar-nav">
-                  <li><a href="index.html" title="Home">Home</a></li>
-                  <li><a href="services.html" title="Services">Services</a></li>
-                  <li><a href="#" title="Terms & Condition">Terms &amp; Condition</a></li>
-                  <li><a href="#" title="Privacy Policy">privacy policy</a></li>
-                  <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
-                </ul>
-              </div><!--/.nav-collapse -->
-            </nav><!-- nav /- -->
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <!-- Footer Section /- -->
