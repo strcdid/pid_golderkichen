@@ -20,7 +20,7 @@
 				<div class="col-md-4 col-sm-4 col-xs-6">
 					<div class="contact-info">
 						<i class="icon icon-Mail"></i>
-						<h5>Our Sicial Media</h5>
+						<h5>Our Social Media</h5>
 							<a href="https://www.instagram.com/{!! setting('contact.CI') !!}" title="{!! setting('contact.CI') !!}">Instagram : {!! setting('contact.CI') !!} </a>
 							<a href="https://www.facebook.com/{!! setting('contact.CF') !!}" title="{!! setting('contact.CF') !!}">Facebook : {!! setting('contact.CF') !!} </a>
 					</div>

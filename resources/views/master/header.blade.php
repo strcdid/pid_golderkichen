@@ -77,11 +77,13 @@
                     @foreach ($services as $nu)
                     <li><a href="{{url('/service/detail')}}" title="{!! $nu->tiitle !!}">{!! $nu->tiitle !!}</a></li>
                     @endforeach
+                    <li><a href="{{url('#')}}" title="Other">Other</a></li>
                 </ul>
             </li>
             <li><a href="{{url('/catalog')}}" title="catalog">Catalog</a></li>
             <li><a href="{{url('/portofolio')}}" title="portofolio">Portfolio</a></li>
             <li><a href="{{url('/Contac')}}" title="Contac">Contact</a></li>
+            {{-- tel:+{!! setting('contact.CP') !!} --}}
           </ul>
         </div><!--/.nav-collapse -->
       </nav><!-- nav /- -->

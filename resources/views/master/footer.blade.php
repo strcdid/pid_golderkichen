@@ -5,7 +5,7 @@
     <div class="container">
       <div class="footer-callout">
         <h4><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" width="44" height="40" alt="Call Out Ic" /> Want to hire us for your work? <span>Just <b>Contact Us</b> and you’re done</span></h4>
-        <a href="{{url('/Contac#messageinquire')}}" title="contact us">contact us</a>
+        <a href="tel:+{!! setting('contact.CP') !!}" title="contact us">contact us</a>
       </div>
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-6">

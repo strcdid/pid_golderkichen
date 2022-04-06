@@ -4,21 +4,24 @@
       <div class="container">
         <!-- Section Header -->
         <div class="section-header">
-          <h3>Our Catalog</h3>
-          <p>We are Specialists in old kitchen, benchtop resurfacing and Splash back.</p>
+            <h3>Our Catalog</h3>
+            <p>We are Specialists in old kitchen, benchtop resurfacing and Splash back.</p>
         </div><!-- Section Header /- -->
         <div class="row">
 @php
 if(!empty($_GET['lin'])){
 $wht=DB::table('service_item')->where('projectname',$_GET['lin'])->get();
 $incor=DB::table('catalog')->where('lans_key',$_GET['lin'])->get()[0];
+}else{
+    $wht=DB::table('service_item')->get();
+    $incor=DB::table('catalog')->get()[0];
 }
 $why=DB::table('catalog')->get();
 @endphp
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-8">
-                         @empty($incor)
+                        @empty($incor)
                             <h1 id="message">{!! setting('site.description') !!}</h1>
                             <img id="myImage" src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}">
                             @else
