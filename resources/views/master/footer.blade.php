@@ -4,7 +4,7 @@
     <!-- Container -->
     <div class="container">
       <div class="footer-callout">
-        <h4><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" width="44" height="40" alt="Call Out Ic" /> Want to hire us for your work? <span>Just <b>Contact Us</b> and you’re done</span></h4>
+        <h4><img src="{!! url('/lgarin211.github.io/'.setting('site.logo')) !!}" width="44" height="40" alt="Call Out Ic" /> {!! setting('service.YCHT') !!}</h4>
         <a href="tel:+{!! setting('contact.CP') !!}" title="contact us">contact us</a>
       </div>
       <div class="row">
