@@ -1,6 +1,5 @@
 @php
  $datapin=DB::table('portofolio')->where('id',$_GET['id'])->first();
- dd($datapin);
 @endphp
     <!-- Blog Section -->
     <div class="container-fluid no-padding blog-single">
@@ -15,7 +14,7 @@
                 <!-- Content Area -->
                 <div class="content-area col-md-8 col-sm-7">
                     <article class="type-post">
-                        <div class="entry-cover"><img src="{!! url('/lgarin211.github.io/'.$datapin->banner) !!}" width="798" height="486" alt="Single Post" /></div>
+                        <div class="entry-cover"><img src="{!! url('/lgarin211.github.io/'.$datapin->banner) !!}" width="798" height="486" alt="{Single Post}" /></div>
                         <hr>
                         <div class="entry-content">
                             <h3 class="entry-title">{!! $datapin->tittle !!} </h3>
