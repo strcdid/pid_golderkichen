@@ -75,9 +75,8 @@
                     $services=DB::table('service')->get();
                     @endphp
                     @foreach ($services as $nu)
-                    <li><a href="{{url('/service/detail')}}" title="{!! $nu->tiitle !!}">{!! $nu->tiitle !!}</a></li>
+                    <li><a href="{{url('/service/detail?id=')}}{!! $nu->id !!}" title="{!! $nu->tiitle !!}">{!! $nu->tiitle !!}</a></li>
                     @endforeach
-                    <li><a href="{{url('#')}}" title="Other">Other</a></li>
                 </ul>
             </li>
             <li><a href="{{url('/catalog')}}" title="catalog">Catalog</a></li>

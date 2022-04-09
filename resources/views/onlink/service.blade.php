@@ -12,6 +12,7 @@
 $services=DB::table('service')->inRandomOrder()->get();
 @endphp
 @foreach ($services as $nu)
+        @if($nu->tiitle!='Other')
           <div class="col-md-4 col-sm-6 col-xs-6">
             <div class="srv-box">
               <img src="{!! url('/lgarin211.github.io/'.$nu->big_banner) !!}" alt="Services" style="object-fit: cover;height: 350px;">
@@ -23,6 +24,7 @@ $services=DB::table('service')->inRandomOrder()->get();
               </div>
             </div>
           </div>
+        @endif
 @endforeach
         </div>
       </div><!-- Container /- -->

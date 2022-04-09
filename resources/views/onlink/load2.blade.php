@@ -1,5 +1,6 @@
 @php
  $datapin=DB::table('portofolio')->where('id',$_GET['id'])->first();
+ dd($datapin);
 @endphp
     <!-- Blog Section -->
     <div class="container-fluid no-padding blog-single">

@@ -14,7 +14,7 @@
             $oo=DB::table('categories')->get();
             @endphp
             @foreach ($oo as $nu)
-            <li class=""><a data-filter=".{{ $nu->slug }}" href="#">{{ $nu->name }}</a></li>
+                <li class=""><a data-filter=".{{ $nu->slug }}" href="#">{{ $nu->name }}</a></li>
             @endforeach
         </ul><!-- / Portfolio Filters -->
 
