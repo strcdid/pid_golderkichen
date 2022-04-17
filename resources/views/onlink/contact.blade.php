@@ -35,7 +35,7 @@
 					<p>feel free to inquire</p>
 				</div><!-- Section Header /- -->
 				<div class="row">
-					<form class="col-md-12 contact-form no-padding" action="contact" method="POST">
+					<form class="col-md-12 contact-form no-padding" action="{!! url('/contact') !!}" method="POST">
 						@csrf
 						<div class="col-md-6 col-sm-6 col-xs-12 form-group">
 							<input type="text" class="form-control" name="name" placeholder="Your Name *" required />
