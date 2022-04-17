@@ -1,4 +1,3 @@
-<div class="section-padding"></div>
     <!-- Container -->
     <div class="container">
 			<div class="row contact-detail">
@@ -58,7 +57,7 @@
 							<textarea class="form-control" rows="5" name="message" placeholder="your mesage" required ></textarea>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12 ">
-							<button type="submit" value="send message" name="submit"> Send </button>
+							<button type="submit" value="send message" name="submit" class="btn btn-warning"> Send </button>
 						</div>
 						<div  class="alert-msg">
 							@if (!empty($success))

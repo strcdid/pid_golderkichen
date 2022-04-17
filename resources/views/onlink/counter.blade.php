@@ -2,7 +2,7 @@
 <div class="counter-section container-fluid no-padding" style="margin-bottom: 5vh;">
     <!-- <div class="section-padding"></div> -->
     <!-- Container -->
-    <div class="container">
+    <div class="container" style="display: none;">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 counter-detail">
                 {!! setting('service.HTP') !!}
