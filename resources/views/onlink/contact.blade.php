@@ -1,3 +1,4 @@
+<div class="section-padding"></div>
     <!-- Container -->
     <div class="container">
 			<div class="row contact-detail">
@@ -27,6 +28,7 @@
 				</div>
 			</div>
 	</div>
+	<div class="section-padding"></div>
 	<div class="container-fluid no-padding">
 			<div class="container">
 				<!-- Section Header -->
@@ -58,11 +60,14 @@
 						<div class="col-md-12 col-sm-12 col-xs-12 ">
 							<button type="submit" value="send message" name="submit"> Send </button>
 						</div>
-						<div  class="alert-msg"></div>
+						<div  class="alert-msg">
+							@if (!empty($success))
+								<script type="text/javascript">
+									{!! $success !!}
+								</script>
+							@endif
+						</div>
 					</form>
 				</div>
 			</div><!-- Container /- -->
 	</div>
-	<div class="section-padding"></div>
-
-
