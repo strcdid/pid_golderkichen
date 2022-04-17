@@ -28,16 +28,40 @@
 			</div>
 	</div>
 	<div class="container-fluid no-padding">
-		<div class="container">
-			<!-- Section Header -->
-			<div class="section-header" id="messageinquire">
-				<h3>send us message</h3>
-				<p>feel free to inquire</p>
-			</div><!-- Section Header /- -->
-			<div class="row">
-                <iframe src="{!! setting('contact.WFG') !!}/viewform?embedded=true" class="col-md-12" frameborder="0" marginheight="0" marginwidth="0" style="height:100vh;">Memuat…</iframe>
-			</div>
-		</div><!-- Container /- -->
+			<div class="container">
+				<!-- Section Header -->
+				<div class="section-header">
+					<h3>send us message</h3>
+					<p>feel free to inquire</p>
+				</div><!-- Section Header /- -->
+				<div class="row">
+					<form class="col-md-12 contact-form no-padding" action="contact" method="POST">
+						@csrf
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+							<input type="text" class="form-control" id="input_name" name="name" placeholder="Your Name *" required />
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+							<input type="email" class="form-control" id="input_email" name="email" placeholder="Your email *" required />
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+							<input type="text" class="form-control" id="input_phone" name="phone" placeholder="Phone" required />
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12 form-group">
+							<input type="text" class="form-control" id="input_subject" name="subject" placeholder="Subject" required />
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+							<input type="file" class="form-control" id="input_foto" name="file" placeholder="Insert Your Kitchen Photo" required />
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+							<textarea id="textarea_message" class="form-control" rows="5" name="message" placeholder="your mesage" required ></textarea>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 ">
+							<input type="submit" value="send message" name="submit" id="btn_submit">
+						</div>
+						<div id="alert-msg" class="alert-msg"></div>
+					</form>
+				</div>
+			</div><!-- Container /- -->
 	</div>
 	<div class="section-padding"></div>
 
