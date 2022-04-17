@@ -38,7 +38,7 @@ class KontakController extends Controller
             $file->move(public_path('/lgarin211.github.io/cliend/'.date('MY')), $filename);
             $contact->banner = '/cliend/'.date('MY/').$filename;
         }
-        // dd($contact);
+        dd($contact);
         $contact->save();
 
         return redirect('/Contac')->with('success', 'Thanks for your inquiry!');
