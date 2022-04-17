@@ -60,7 +60,7 @@ Route::get('/make', function () {
 
 Route::get('Contac', [KontakController::class, 'index']);
 Route::get('contact', [KontakController::class, 'index'])->name('kontak');
-Route::post('contact', [KontakController::class, 'store'])->name('kontik');
+Route::post('otpos', [KontakController::class, 'store'])->name('kontik');
 Route::post('counter', [CounterController::class, 'index'])->name('counter');
 
 
